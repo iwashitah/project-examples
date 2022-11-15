@@ -1,1 +1,1 @@
-FROM hello-world:latest
+FROM alpine:3.3
