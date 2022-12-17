@@ -17,7 +17,7 @@ pipeline {
                 )
             }
         }
-
+/*
         stage ('Build docker image') {
             steps {
                 script {
@@ -25,7 +25,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage ('Push image to Artifactory') {
             steps {
                 rtDockerPush(
