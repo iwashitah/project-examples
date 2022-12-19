@@ -1,5 +1,5 @@
 pipeline {
-    agent s390x
+    agent any
 
     stages {
         stage ('Clone') {
