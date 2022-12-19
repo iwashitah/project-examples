@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent s390x
 
     stages {
         stage ('Clone') {
@@ -51,7 +51,7 @@ pipeline {
                 )
             }
         }
-
+/*
         stage ('Xray scan') {
             steps {
                 xrayScan (
@@ -61,5 +61,6 @@ pipeline {
                 )
             }
         }
+*/
     }
 }
