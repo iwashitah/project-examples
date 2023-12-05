@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Clone') {
             steps {
-                git branch: 'master', url: "https://github.com/jfrog/project-examples.git"
+                git branch: 'master', url: "https://github.com/iwashitah/project-examples.git"
             }
         }
 
@@ -19,13 +19,13 @@ pipeline {
                 rtNpmResolver (
                     id: "NPM_RESOLVER",
                     serverId: "ARTIFACTORY_SERVER",
-                    repo: "npm-remote"
+                    repo: "proj1-npm-virtual"
                 )
 
                 rtNpmDeployer (
                     id: "NPM_DEPLOYER",
                     serverId: "ARTIFACTORY_SERVER",
-                    repo: "npm-local"
+                    repo: "proj1-npm-virtual"
                 )
             }
         }
@@ -35,6 +35,7 @@ pipeline {
                 rtNpmInstall (
                     tool: NPM_TOOL, // Tool name from Jenkins configuration
                     path: "npm-example",
+                    project: "proj1",
                     resolverId: "NPM_RESOLVER"
                 )
             }
@@ -45,6 +46,7 @@ pipeline {
                 rtNpmPublish (
                     tool: NPM_TOOL, // Tool name from Jenkins configuration
                     path: "npm-example",
+                    project: "proj1",
                     deployerId: "NPM_DEPLOYER"
                 )
             }
@@ -53,6 +55,17 @@ pipeline {
         stage ('Publish build info') {
             steps {
                 rtPublishBuildInfo (
+                    project: "proj1",
+                    serverId: "ARTIFACTORY_SERVER"
+                )
+            }
+        }
+
+        stage ('Xray Scan') {
+            steps {
+                xrayScan (
+                    project: "proj1",
+                    failBuild: false,
                     serverId: "ARTIFACTORY_SERVER"
                 )
             }
