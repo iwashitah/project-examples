@@ -39,7 +39,7 @@ pipeline {
         stage ('Package and create distribution archives') {
             steps {
                 sh '''
-                    $virtual_env_activation
+                    //$virtual_env_activation
                     cd python-example/pip-example
                     python setup.py sdist bdist_wheel
                 '''
