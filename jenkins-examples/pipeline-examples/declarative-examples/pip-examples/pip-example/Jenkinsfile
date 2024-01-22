@@ -1,4 +1,4 @@
-def virtual_env_activation = ". /usr/lib/python3.11/venv/scripts/common/activate" // pip virtual-environment activation command
+//def virtual_env_activation = ". /usr/lib/python3.11/venv/scripts/common/activate" // pip virtual-environment activation command
 
 pipeline {
     agent any
@@ -30,8 +30,8 @@ pipeline {
             steps {
                 rtPipInstall (
                     resolverId: "PIP_RESOLVER",
-                    args: "-r python-example/pip-example/requirements.txt",
-                    envActivation: virtual_env_activation
+                    args: "-r python-example/pip-example/requirements.txt"
+                    //envActivation: virtual_env_activation
                 )
             }
         }
