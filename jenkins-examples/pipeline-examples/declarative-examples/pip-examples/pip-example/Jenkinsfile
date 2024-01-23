@@ -1,4 +1,4 @@
-def virtual_env_activation = ". /usr/lib/python3.11/venv/scripts/common/activate" // pip virtual-environment activation command
+def virtual_env_activation = "source /usr/lib/python3.11/venv/scripts/common/activate" // pip virtual-environment activation command
 
 pipeline {
     agent any
