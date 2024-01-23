@@ -40,6 +40,7 @@ pipeline {
             steps {
                 sh "#!/bin/bash \n" +
                     $virtual_env_activation
+                sh '''
                     cd python-example/pip-example
                     python setup.py sdist bdist_wheel
                 '''
