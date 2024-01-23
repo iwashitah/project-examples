@@ -38,7 +38,7 @@ pipeline {
 
         stage ('Package and create distribution archives') {
             steps {
-                sh '''#!/usr/bin/env bash
+                sh '''#!/usr/bin/env groovy
                     $virtual_env_activation
                     cd python-example/pip-example
                     python setup.py sdist bdist_wheel
