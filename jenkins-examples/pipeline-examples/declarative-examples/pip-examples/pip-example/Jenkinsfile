@@ -38,9 +38,8 @@ pipeline {
 
         stage ('Package and create distribution archives') {
             steps {
-                sh '''
-                    //$virtual_env_activation
-                    . /usr/lib/python3.11/venv/scripts/common/activate
+                sh '''#!/bin/bash
+                    $virtual_env_activation
                     cd python-example/pip-example
                     python setup.py sdist bdist_wheel
                 '''
