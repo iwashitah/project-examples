@@ -1,1 +1,1 @@
-FROM webgoat/webgoat:latest
+FROM docker:3.8
