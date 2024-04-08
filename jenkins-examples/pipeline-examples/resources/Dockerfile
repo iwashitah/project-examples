@@ -1,1 +1,1 @@
-FROM webgoat/webgoat:latest
+FROM alpine:3.3
