@@ -8,8 +8,13 @@ buildscript {
     }
 }
 
+//plugins {
+//    id("com.jfrog.artifactory") version "5.+"
+//}
 plugins {
-    id("com.jfrog.artifactory") version "5.+"
+  id "com.jfrog.artifactory" version "4.16.0"
+  id 'maven-publish'
+  id 'java'
 }
 
 allprojects {
@@ -63,7 +68,7 @@ project('library') {
     }
 }
 
-artifactoryX {
+artifactory {
     clientConfig.setIncludeEnvVars(true)
     clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new Date().toString())
 
