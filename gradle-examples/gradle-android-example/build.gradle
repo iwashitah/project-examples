@@ -9,7 +9,7 @@ buildscript {
 }
 
 plugins {
-    id("com.jfrog.artifactory") version "5.+"
+    id("com.jfrog.artifactory") version "7.+"
 }
 
 allprojects {
