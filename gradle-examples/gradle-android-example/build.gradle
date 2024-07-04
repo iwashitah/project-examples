@@ -9,7 +9,7 @@ buildscript {
 }
 
 plugins {
-    id("com.jfrog.artifactory") version "7.+"
+    id("com.jfrog.artifactory") version "5.+"
 }
 
 allprojects {
@@ -67,10 +67,10 @@ artifactory {
     clientConfig.setIncludeEnvVars(true)
     clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new Date().toString())
 
-    contextUrl = 'http://127.0.0.1:8081/artifactory'
+    contextUrl = 'http://demo-artifactory.demo.svc.cluster.local:8082/artifactory'
     publish {
         repository {
-            repoKey = 'libs-snapshot-local' // The Artifactory repository key to publish to
+            repoKey = 'proj1-maven-virtual' // The Artifactory repository key to publish to
             username = "${artifactory_user}" // The publisher user name
             password = "${artifactory_password}" // The publisher password
             // This is an optional section for configuring Ivy publication (when publishIvy = true).
