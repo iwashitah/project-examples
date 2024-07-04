@@ -63,7 +63,7 @@ project('library') {
     }
 }
 
-artifactory {
+artifactoryX {
     clientConfig.setIncludeEnvVars(true)
     clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new Date().toString())
 
