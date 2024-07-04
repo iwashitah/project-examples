@@ -8,11 +8,12 @@ buildscript {
     }
 }
 
-//plugins {
-//    id("com.jfrog.artifactory") version "5.+"
-//}
 plugins {
-  id "com.jfrog.artifactory" version "4.16.0"
+    id("com.jfrog.artifactory") version "5.+"
+}
+/*
+plugins {
+  id "com.jfrog.artifactory" version "5+"
   id 'maven-publish'
   id 'java'
 }
@@ -25,7 +26,7 @@ allprojects {
         mavenCentral()
     }
 }
-
+*/
 // Setting this property to true will make the artifactoryPublish task
 // skip this module (in our case, the root module):
 artifactoryPublish.skip = true
