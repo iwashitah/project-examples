@@ -1,5 +1,5 @@
 {
-  "name": "npm-example",
+  "name": "@iwashitah/npm-example",
   "version": "0.0.4",
   "scripts": {
     "start": "node helloworld"
