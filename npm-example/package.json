@@ -1,14 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "@iwashitah/npm-example",
-=======
-  "name": "npm-example",
-<<<<<<< HEAD
->>>>>>> parent of 5048033 (Update package.json)
-  "version": "0.0.4",
-=======
   "version": "0.0.3",
->>>>>>> parent of 5019ec2 (Update package.json)
   "scripts": {
     "start": "node helloworld"
   },
