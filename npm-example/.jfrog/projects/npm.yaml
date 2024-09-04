@@ -1,0 +1,8 @@
+version: 1
+type: npm
+resolver:
+    repo: proj1-npm-virtual
+    serverId: demo-artifactory
+deployer:
+    repo: proj1-npm-virtual
+    serverId: demo-artifactory

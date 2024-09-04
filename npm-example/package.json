@@ -1,11 +1,11 @@
 {
   "name": "@iwashitah/npm-example",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "scripts": {
     "start": "node helloworld"
   },
   "dependencies": {
-    "send": "0.8.4"
+      "send": "0.8.4"
   },
   "devDependencies": {
     "debug": "3.0.0"

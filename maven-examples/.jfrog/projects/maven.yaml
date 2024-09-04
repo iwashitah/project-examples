@@ -1,0 +1,11 @@
+version: 1
+type: maven
+resolver:
+    serverId: demo-artifactory
+    snapshotRepo: proj1-maven-virtual
+    releaseRepo: proj1-maven-virtual
+deployer:
+    serverId: demo-artifactory
+    snapshotRepo: proj1-maven-virtual
+    releaseRepo: proj1-maven-virtual
+useWrapper: true

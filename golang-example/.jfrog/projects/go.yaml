@@ -1,0 +1,8 @@
+version: 1
+type: go
+resolver:
+    repo: proj1-go-virtual
+    serverId: iwashitah6
+deployer:
+    repo: proj1-go-virtual
+    serverId: iwashitah6
