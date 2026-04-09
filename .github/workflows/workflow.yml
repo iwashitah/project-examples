@@ -22,6 +22,7 @@ jobs:
           # Basic authentication credentials
           ## JF_USER: ${{ secrets.JF_USER }}
           ## JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+          JFROG_CLI_LOG_LEVEL: DEBUG
 
       - name: Run JFrog CLI
         run: |
